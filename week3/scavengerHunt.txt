@@ -1,0 +1,33 @@
+For this I created a completely new ubuntu server (12.04 LTS) and did no upgrades,
+no updates, no apache or other software, and created no new users.
+
+1. Command: find /usr/bin -print | wc -l 
+   Result: 574
+   Sources: http://hints.macworld.com/article.php?story=20010508182132282
+
+2. Command: top
+	    SHIFT + M (sorts the results by most memory)
+   Result:  PID  USER      PR  NI  VIRT  RES  SHR S  %CPU %MEM  TIME+   COMMAND
+	    801  root      20   0 17936 4848 1392 S  0.0  1.0   0:00.05 nova-agent
+   Sources: http://askubuntu.com/questions/138668/is-there-a-program-that-tells-ram-usage
+ 
+3. Command: date
+	 Result: Sat Feb  2 02:57:03 UTC 2013 (Timezone is UTC)
+   Sources: http://www.cyberciti.biz/faq/howto-linux-unix-change-setup-timezone-tz-variable/
+
+4. Command: wc -l /etc/group
+   Result: 51 /etc/group
+   Sources: http://www.computerhope.com/unix/uwc.htm
+   
+5. Command: wget http://cl.ly/2F0Q1r2y3K0l/362.tar (To download file on server)
+						mkdir 362 (Directory for un-tarred files)
+						tar -C 362/ -xvf 362.tar (untar files)
+						apt-get update
+						apt-get install apache2
+						apt-get install php5-cli
+						php 362.php (execute file)
+						
+   Result: 0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181
+   Sequence: Fibonacci Sequence :)
+   Sources: http://www.youtube.com/watch?v=-2IQKL9zJKE
+   					http://www.cyberciti.biz/faq/tar-extract-linux/
